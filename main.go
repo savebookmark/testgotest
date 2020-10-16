@@ -58,6 +58,11 @@ func main() {
 		fmt.Printf("%d ->", val)
 	}
 
+	treeS()
+	bitree()
+	heapadd()
+}
+func treeS() {
 	tree := dataStruct.Tree{}
 
 	val := 1
@@ -79,9 +84,6 @@ func main() {
 	fmt.Println()
 	//hahahah branch m
 	tree.DFS2()
-
-	bitree()
-	heapadd()
 }
 func bitree() {
 	tree := dataStruct.NewBinaryTree(5)
