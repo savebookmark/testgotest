@@ -32,6 +32,7 @@ func main() {
 		front, queue = queue[0], queue[1:]
 		fmt.Println(front)
 	}
+	fmt.Println("//////////////////////////////////")
 
 	stack2 := dataStruct.NewStack()
 
@@ -57,10 +58,16 @@ func main() {
 		val := queue2.Pop()
 		fmt.Printf("%d ->", val)
 	}
+	fmt.Println("//////////////////////////////////")
 
 	treeS()
+	fmt.Println("//////////////////////////////////")
 	bitree()
+	fmt.Println("//////////////////////////////////")
 	heapadd()
+	fmt.Println("//////////////////////////////////")
+	heapmin()
+	fmt.Println("//////////////////////////////////")
 }
 func treeS() {
 	tree := dataStruct.Tree{}
@@ -125,5 +132,48 @@ func heapadd() {
 
 	fmt.Println(h.Pop())
 	fmt.Println(h.Pop())
+	fmt.Println(h.Pop())
+}
+func heapmin() {
+
+	h := &dataStruct.MinHeap{}
+
+	// [-1, 3, -1, 5, 4], 2번째 큰값
+	nums := []int{-1, 3, -1, 5, 4}
+
+	for i := 0; i < len(nums); i++ {
+		h.Push(nums[i])
+		if h.Count() > 2 {
+			h.Pop()
+		}
+	}
+	fmt.Println(h.Pop())
+
+	//Input: [2, 4, -2, -3, 8], 1
+	//Output: 8
+	h = &dataStruct.MinHeap{}
+
+	nums = []int{2, 4, -2, -3, 8}
+
+	for i := 0; i < len(nums); i++ {
+		h.Push(nums[i])
+		if h.Count() > 1 {
+			h.Pop()
+		}
+	}
+	fmt.Println(h.Pop())
+
+	//Input: [-5, -3, 1], 3
+	//Output: -5
+	h = &dataStruct.MinHeap{}
+
+	nums = []int{-5, -3, 1}
+
+	for i := 0; i < len(nums); i++ {
+		h.Push(nums[i])
+		if h.Count() > 3 {
+			h.Pop()
+		}
+	}
 	fmt.Println(h.Pop())
 }
