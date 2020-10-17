@@ -13,6 +13,7 @@ func main() {
 	queuestack2()
 
 	treeS()
+	fmt.Println()
 	fmt.Println("//////////////////////////////////")
 	bitree()
 	fmt.Println("//////////////////////////////////")
@@ -58,7 +59,6 @@ func queuestack2() {
 	for i := 1; i <= 5; i++ {
 		stack2.Push(i)
 	}
-
 	fmt.Println("NewStack")
 
 	for !stack2.Empty() {
@@ -71,12 +71,14 @@ func queuestack2() {
 		queue2.Push(i)
 	}
 
+	fmt.Println()
 	fmt.Println("NewQueue")
 
 	for !queue2.Empty() {
 		val := queue2.Pop()
 		fmt.Printf("%d ->", val)
 	}
+	fmt.Println()
 	fmt.Println("//////////////////////////////////")
 }
 func treeS() {
