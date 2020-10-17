@@ -3,9 +3,26 @@ package main
 import (
 	"dataStruct"
 	"fmt"
+	"mutexlock"
+	"sync"
+	"time"
 )
 
 func main() {
+	queuestack()
+	queuestack2()
+
+	treeS()
+	fmt.Println("//////////////////////////////////")
+	bitree()
+	fmt.Println("//////////////////////////////////")
+	heapadd()
+	fmt.Println("//////////////////////////////////")
+	heapmin()
+	fmt.Println("//////////////////////////////////")
+	lock()
+}
+func queuestack() {
 	stack := []int{}
 
 	for i := 1; i <= 5; i++ {
@@ -34,6 +51,8 @@ func main() {
 	}
 	fmt.Println("//////////////////////////////////")
 
+}
+func queuestack2() {
 	stack2 := dataStruct.NewStack()
 
 	for i := 1; i <= 5; i++ {
@@ -58,15 +77,6 @@ func main() {
 		val := queue2.Pop()
 		fmt.Printf("%d ->", val)
 	}
-	fmt.Println("//////////////////////////////////")
-
-	treeS()
-	fmt.Println("//////////////////////////////////")
-	bitree()
-	fmt.Println("//////////////////////////////////")
-	heapadd()
-	fmt.Println("//////////////////////////////////")
-	heapmin()
 	fmt.Println("//////////////////////////////////")
 }
 func treeS() {
@@ -176,4 +186,21 @@ func heapmin() {
 		}
 	}
 	fmt.Println(h.Pop())
+}
+func lock() {
+	for i := 0; i < 20; i++ {
+		mutexlock.Accounts = append(mutexlock.Accounts, &mutexlock.Account{Balance: 1000, Mutex: &sync.Mutex{}})
+	}
+	mutexlock.GlobalLock = &sync.Mutex{}
+
+	mutexlock.PrintTotalBalance()
+
+	for i := 0; i < 10; i++ {
+		go mutexlock.GoTransfer()
+	}
+
+	for {
+		mutexlock.PrintTotalBalance()
+		time.Sleep(100 * time.Millisecond)
+	}
 }
