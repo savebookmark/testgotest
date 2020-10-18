@@ -6,14 +6,17 @@ import (
 	"time"
 )
 
+//Car .
 type Car struct {
 	val string
 }
 
+//Plane ..
 type Plane struct {
 	val string
 }
 
+//MakeTire .
 func MakeTire(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPlaneChan chan Plane) {
 	for {
 		select {
@@ -27,6 +30,7 @@ func MakeTire(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPl
 	}
 }
 
+//MakeEngine ..
 func MakeEngine(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPlaneChan chan Plane) {
 	for {
 		select {
@@ -40,6 +44,7 @@ func MakeEngine(carChan chan Car, planeChan chan Plane, outCarChan chan Car, out
 	}
 }
 
+// StartCarWork ..
 func StartCarWork(chan1 chan Car) {
 	i := 0
 	for {
@@ -49,6 +54,7 @@ func StartCarWork(chan1 chan Car) {
 	}
 }
 
+//StartPlaneWork ...
 func StartPlaneWork(chan1 chan Plane) {
 	i := 0
 	for {
