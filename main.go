@@ -1,6 +1,7 @@
 package main
 
 import (
+	"channeltest"
 	"dataStruct"
 	"fmt"
 	"mutexlock"
@@ -22,6 +23,8 @@ func main() {
 	heapmin()
 	fmt.Println("//////////////////////////////////")
 	lock()
+	fmt.Println("//////////////////////////////////")
+	channelCarmake()
 }
 func queuestack() {
 	stack := []int{}
@@ -204,5 +207,19 @@ func lock() {
 	for {
 		mutexlock.PrintTotalBalance()
 		time.Sleep(100 * time.Millisecond)
+	}
+}
+func channelCarmake() {
+	chan1 := make(chan channeltest.Car)
+	chan2 := make(chan channeltest.Car)
+	chan3 := make(chan channeltest.Car)
+
+	go channeltest.StartWork(chan1)
+	go channeltest.MakeTire(chan1, chan2)
+	go channeltest.MakeEngine(chan2, chan3)
+
+	for {
+		result := <-chan3
+		fmt.Println(result.Val)
 	}
 }
