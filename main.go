@@ -210,7 +210,7 @@ func lock() {
 	}
 }
 
-// 채널
+// 채널 사용
 func channelCarmake() {
 	chan1 := make(chan channeltest.Car)
 	chan2 := make(chan channeltest.Car)
