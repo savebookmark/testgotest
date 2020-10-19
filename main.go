@@ -209,6 +209,8 @@ func lock() {
 		time.Sleep(100 * time.Millisecond)
 	}
 }
+
+// 채널
 func channelCarmake() {
 	chan1 := make(chan channeltest.Car)
 	chan2 := make(chan channeltest.Car)
