@@ -1,7 +1,7 @@
 package main
 
 import (
-	// "example/test/baseball"
+	"example/test/baseball"
 	// "example/test/calcal"
 	"example/test/channeltest"
 	"example/test/dataStruct"
@@ -37,7 +37,9 @@ func main() {
 	// fmt.Println("---------------")
 	// channelCarmake()
 
-	// baseball.Bsmain()
+	fmt.Println(quote.Hello())
+
+	baseball.Bsmain()
 	// calcal.Calmain()
 	// docktyping.Dockmain()
 	// doublelinklist.Doublemain()
@@ -46,7 +48,6 @@ func main() {
 	// link.Linkmain()
 	// selecttest.Selectmain()
 
-	fmt.Println(quote.Hello())
 }
 func queuestack() {
 	stack := []int{}
