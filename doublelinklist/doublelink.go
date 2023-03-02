@@ -1,4 +1,4 @@
-package main
+package doublelinklist
 
 import "fmt"
 
@@ -71,7 +71,7 @@ func (l *LinkedList) PrintReverse() {
 	fmt.Printf("%d\n", node.val)
 }
 
-func main() {
+func Doublemain() {
 	list := &LinkedList{}
 	list.AddNode(0)
 

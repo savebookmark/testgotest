@@ -1,4 +1,4 @@
-package main
+package docktyping
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ func Println(p Printable) {
 	fmt.Println(p.String())
 }
 
-func main() {
+func Dockmain() {
 	a := &StructA{val: "AAA"}
 	Println(a)
 

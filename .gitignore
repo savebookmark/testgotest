@@ -3,3 +3,5 @@ calcal/cal
 hi/hello
 link/linklist
 .vscode/launch.json
+go.sum
+test

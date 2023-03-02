@@ -1,4 +1,4 @@
-package main
+package selecttest
 
 import (
 	"fmt"
@@ -6,17 +6,17 @@ import (
 	"time"
 )
 
-//Car .
+// Car .
 type Car struct {
 	val string
 }
 
-//Plane ..
+// Plane ..
 type Plane struct {
 	val string
 }
 
-//MakeTire .
+// MakeTire .
 func MakeTire(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPlaneChan chan Plane) {
 	for {
 		select {
@@ -30,7 +30,7 @@ func MakeTire(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPl
 	}
 }
 
-//MakeEngine ..
+// MakeEngine ..
 func MakeEngine(carChan chan Car, planeChan chan Plane, outCarChan chan Car, outPlaneChan chan Plane) {
 	for {
 		select {
@@ -54,7 +54,7 @@ func StartCarWork(chan1 chan Car) {
 	}
 }
 
-//StartPlaneWork ...
+// StartPlaneWork ...
 func StartPlaneWork(chan1 chan Plane) {
 	i := 0
 	for {
@@ -64,7 +64,7 @@ func StartPlaneWork(chan1 chan Plane) {
 	}
 }
 
-func main() {
+func Selectmain() {
 	carChan1 := make(chan Car)
 	carChan2 := make(chan Car)
 	carChan3 := make(chan Car)

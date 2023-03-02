@@ -1,4 +1,4 @@
-package main
+package interfacetest
 
 import (
 	"fmt"
@@ -67,7 +67,7 @@ func (s *SpoonOfAppleJam) String() string {
 	return "+ Apple"
 }
 
-func main() {
+func Interfacemain() {
 	bread := &Bread{}
 	//jam := &StrawberryJam{}
 	//jam := &OrangeJam{}

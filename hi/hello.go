@@ -1,4 +1,4 @@
-package main
+package hi
 
 import (
 	"fmt"
@@ -33,7 +33,7 @@ func say2(s string) {
 	}
 
 }
-func main() {
+func Himain() {
 	fmt.Println("hey")
 	fmt.Println("Happy", math.Pi, "Day")
 	a, b := swap("hello", "world")

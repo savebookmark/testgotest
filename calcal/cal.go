@@ -1,4 +1,4 @@
-package main
+package calcal
 
 import (
 	"bufio"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+func Calmain() {
 
 	fmt.Println("숫자를 입력하세요")
 	reader := bufio.NewReader(os.Stdin)

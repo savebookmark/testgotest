@@ -1,30 +1,52 @@
 package main
 
 import (
-	"channeltest"
-	"dataStruct"
+	// "example/test/baseball"
+	// "example/test/calcal"
+	"example/test/channeltest"
+	"example/test/dataStruct"
+
+	// "example/test/docktyping"
+	// "example/test/doublelinklist"
+	// "example/test/hi"
+	// "example/test/interfacetest"
+	// "example/test/link"
+	"example/test/mutexlock"
+	// "example/test/selecttest"
 	"fmt"
-	"mutexlock"
 	"sync"
 	"time"
+
+	"rsc.io/quote/v4"
 )
 
 func main() {
-	queuestack()
-	queuestack2()
+	// queuestack()
+	// queuestack2()
 
 	treeS()
 	fmt.Println()
-	fmt.Println("//////////////////////////////////")
+	fmt.Println("---------------")
 	bitree()
-	fmt.Println("//////////////////////////////////")
+	fmt.Println("---------------")
 	heapadd()
-	fmt.Println("//////////////////////////////////")
+	fmt.Println("---------------")
 	heapmin()
-	fmt.Println("//////////////////////////////////")
-	lock()
-	fmt.Println("//////////////////////////////////")
-	channelCarmake()
+	fmt.Println("---------------")
+	// lock()
+	// fmt.Println("---------------")
+	// channelCarmake()
+
+	// baseball.Bsmain()
+	// calcal.Calmain()
+	// docktyping.Dockmain()
+	// doublelinklist.Doublemain()
+	// hi.Himain()
+	// interfacetest.Interfacemain()
+	// link.Linkmain()
+	// selecttest.Selectmain()
+
+	fmt.Println(quote.Hello())
 }
 func queuestack() {
 	stack := []int{}

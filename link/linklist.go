@@ -1,14 +1,14 @@
-package main
+package link
 
 import "fmt"
 
-//Node .
+// Node .
 type Node struct {
 	next *Node
 	val  int
 }
 
-func main() {
+func Linkmain() {
 	var root *Node
 	var tail *Node
 

@@ -1,20 +1,19 @@
-package main
+package baseball
 
 import (
 	"fmt"
 	"math/rand"
-	"time"
+	// "time"
 )
 
-//
 // Result 구조체
 type Result struct {
 	strikes int
 	balls   int
 }
 
-func main() {
-	rand.Seed(time.Now().UnixNano())
+func Bsmain() {
+	// rand.Seed(time.Now().UnixNano())
 	// 무작위 숫자 3개를 만든다.
 	numbers := MakeNumbers()
 
@@ -123,7 +122,7 @@ func InputNumbers() [3]int {
 	return rst
 }
 
-//CompareNumbers 두개의 숫자 3개를 비교해서 결과를 반환한다.
+// CompareNumbers 두개의 숫자 3개를 비교해서 결과를 반환한다.
 func CompareNumbers(numbers, inputNumbers [3]int) Result {
 	strikes := 0
 	balls := 0
@@ -149,7 +148,7 @@ func PrintResult(result Result) {
 	fmt.Printf("%dS%dB\n", result.strikes, result.balls)
 }
 
-//IsGameEnd  비교 결과가 3 스트라이크 인지 확인
+// IsGameEnd  비교 결과가 3 스트라이크 인지 확인
 func IsGameEnd(result Result) bool {
 	return result.strikes == 3
 }
