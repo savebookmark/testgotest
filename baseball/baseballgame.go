@@ -6,7 +6,7 @@ import (
 	// "time"
 )
 
-// Result 구조체
+// / Result 구조체
 type Result struct {
 	strikes int
 	balls   int
