@@ -1,8 +1,9 @@
 package main
 
 import (
-	"example/test/baseball"
+
 	// "example/test/calcal"
+	"example/test/calcal"
 	"example/test/channeltest"
 	"example/test/dataStruct"
 
@@ -39,8 +40,8 @@ func main() {
 
 	fmt.Println(quote.Hello())
 
-	baseball.Bsmain()
-	// calcal.Calmain()
+	// baseball.Bsmain()
+	calcal.Calmain()
 	// docktyping.Dockmain()
 	// doublelinklist.Doublemain()
 	// hi.Himain()
