@@ -30,13 +30,13 @@ func Calmain() {
 	line = strings.TrimSpace(line)
 
 	if line == "+" {
-		fmt.Printf("%d + %d = %d", n1, n2, n1+n2)
+		fmt.Printf("%d + %d = %d ", n1, n2, n1+n2)
 	} else if line == "-" {
-		fmt.Printf("%d - %d = %d", n1, n2, n1-n2)
+		fmt.Printf("%d - %d = %d ", n1, n2, n1-n2)
 	} else if line == "*" {
-		fmt.Printf("%d * %d = %d", n1, n2, n1*n2)
+		fmt.Printf("%d * %d = %d ", n1, n2, n1*n2)
 	} else if line == "/" {
-		fmt.Printf("%d / %d = %d", n1, n2, n1/n2)
+		fmt.Printf("%d / %d = %d ", n1, n2, n1/n2)
 	} else {
 		fmt.Println("잘못 입력하셨습니다.")
 	}
